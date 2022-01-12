@@ -193,10 +193,7 @@ function App() {
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Withdrawing Dividends!`);
     console.log(`${CONFIG.CONTRACT_ADDRESS} IS THE ADDRESS`);
-    blockchain.smartContract.methods
-      .claimDivs()
-      dispatch(fetchData(blockchain.account));
-      }); 
+    blockchain.smartContract.methods.claimDivs()
   };
   
   
