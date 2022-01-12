@@ -324,7 +324,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              Bob Staking
+              Bob Sagat Token - Staking Hub
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -339,20 +339,6 @@ function App() {
             <s.SpacerSmall />
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
-                  The sale has ended.
-                </s.TextTitle>
-                <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
-                  You can still find {CONFIG.NFT_NAME} on
-                </s.TextDescription>
-                <s.SpacerSmall />
-                <StyledLink target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
-                  {CONFIG.MARKETPLACE}
-                </StyledLink>
               </>
             ) : (
               <>
