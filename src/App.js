@@ -163,7 +163,7 @@ function App() {
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
   const [mintAmount, setMintAmount] = useState(1000000);
-  const [yieldAmount, yieldAmount] = useState(100);
+  const [yieldAmount, setYieldAmount] = useState(100);
   const [feedback, setFeedback] = useState(`Staked: ${mintAmount}  Rewards: ${yieldAmount}`);	
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
