@@ -162,9 +162,10 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [mintAmount, setMintAmount] = useState(1000000);
-  const [yieldAmount, setYieldAmount] = useState(100);
-  const [feedback, setFeedback] = useState(`Staked: ${mintAmount}  Rewards: ${yieldAmount}`);	
+  const [mintAmount, setMintAmount] = useState(0);
+  const [stakedAmount, setStakedAmount] = useState(0);	
+  const [yieldAmount, setYieldAmount] = useState(0);
+  const [feedback, setFeedback] = useState(`Staked: ${mintAmount} BOB     Claimable Rewards: ${stakedAmount} BOB`);	
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -184,7 +185,7 @@ function App() {
     SHOW_BACKGROUND: false,
   });
 
-  const withdrawETH = () => {
+  const withdrawYield = () => {
 
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
@@ -323,7 +324,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+              Bob Staking
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -501,7 +502,7 @@ function App() {
         <StyledButton
         onClick={(e) => {
         e.preventDefault();
-        withdrawETH();
+        withdrawYield();
         }}
         >
         </StyledButton>
