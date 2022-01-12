@@ -187,9 +187,7 @@ function App() {
 
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = 0;
-    let totalGasLimit = String(gasLimit*1000);
-    console.log("Cost: ", totalCostWei);
+    let totalGasLimit = String(gasLimit*3);
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Withdrawing Dividends!`);
     console.log(`${CONFIG.CONTRACT_ADDRESS} IS THE ADDRESS`);
@@ -199,7 +197,7 @@ function App() {
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
         from: blockchain.account,
-        value: totalCostWei,
+        value: 0,
       })
   };
   
