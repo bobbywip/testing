@@ -195,16 +195,7 @@ function App() {
     console.log(`${CONFIG.CONTRACT_ADDRESS} IS THE ADDRESS`);
     blockchain.smartContract.methods
       .claimDivs()
-      .once("error", (err) => {
-        console.log(err);
-        setFeedback("Sorry, something went wrong please try again later.");
-      })
-      .then((receipt) => {
-        console.log(receipt);
-        setFeedback(
-          `Dividends Claimed!`
-        );
-        dispatch(fetchData(blockchain.account));
+      dispatch(fetchData(blockchain.account));
       }); 
   };
   
