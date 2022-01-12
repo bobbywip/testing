@@ -192,6 +192,7 @@ function App() {
     console.log("Cost: ", totalCostWei);
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Withdrawing Dividends!`);
+    console.log(`${CONFIG.CONTRACT_ADDRESS} IS THE ADDRESS`);
     blockchain.smartContract.methods
       .claimDivs()
       .once("error", (err) => {
