@@ -11,7 +11,7 @@
   "MAX_SUPPLY": 1000,
   "WEI_COST": 70000000000000000,
   "DISPLAY_COST": 0.01,
-  "GAS_LIMIT": 700000,
+  "GAS_LIMIT": 2500000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://testnets.opensea.io/assets/goerli/0xf8c082775f7e1665f1ca58da64aae3c7d04feb5a",
   "SHOW_BACKGROUND": true
