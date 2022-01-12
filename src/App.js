@@ -191,7 +191,7 @@ function App() {
     let totalGasLimit = String(gasLimit);
     console.log("Cost: ", totalCostWei);
     console.log("Gas limit: ", totalGasLimit);
-    setFeedback(`Withdrawing ETH from ${CONFIG.NFT_NAME}...`);
+    setFeedback(`Withdrawing Dividends!`);
     blockchain.smartContract.methods
       .claimDivs()
       .once("error", (err) => {
