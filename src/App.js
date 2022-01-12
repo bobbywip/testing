@@ -162,8 +162,9 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
-  const [mintAmount, setMintAmount] = useState(1);
+  const [mintAmount, setMintAmount] = useState(1000000);
+  const [yieldAmount, yieldAmount] = useState(100);
+  const [feedback, setFeedback] = useState(`Staked: ${mintAmount}  Rewards: ${yieldAmount}`);	
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -187,7 +188,7 @@ function App() {
 
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
-    let totalGasLimit = String(gasLimit*3);
+    let totalGasLimit = String(gasLimit);
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Withdrawing Dividends!`);
     console.log(`${CONFIG.CONTRACT_ADDRESS} IS THE ADDRESS`);
