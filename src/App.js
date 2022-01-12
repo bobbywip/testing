@@ -324,7 +324,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              Bob Sagat Token - Staking Hub
+              Stake Bob Saget!
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -364,7 +364,7 @@ function App() {
                         color: "var(--accent-text)",
                       }}
                     >
-                      Connect to the {CONFIG.NETWORK.NAME} Golari Testnet network
+                      Connect to the {CONFIG.NETWORK.NAME} Testnet Network
                     </s.TextDescription>
                     <s.SpacerSmall />
                     <StyledButton
@@ -469,8 +469,7 @@ function App() {
             }}
           >
             Please make sure you are connected to the right network (
-            {CONFIG.NETWORK.NAME} Golari Testnet) and the correct address. Please note:
-            Once you make the purchase, you cannot undo this action.
+            {CONFIG.NETWORK.NAME} Testnet Network)
           </s.TextDescription>
           <s.SpacerSmall />
           <s.TextDescription
